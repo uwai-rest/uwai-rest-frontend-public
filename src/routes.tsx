@@ -1,16 +1,25 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Container } from "@mui/material";
 
-import { About } from "./pages/About";
-import { Home } from "./pages/Home";
+import { Header } from "./components/Header";
+import { HomePage } from "./pages/Home";
+import { PurchaseTokensPage } from "./pages/PurchaseTokens";
+import { SubscriptionPage } from "./pages/Subscription";
 
 const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Header />
+      <main>
+        <Container>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/subscription" element={<SubscriptionPage />} />
+            <Route path="/purchase-tokens" element={<PurchaseTokensPage />} />
+          </Routes>
+        </Container>
+      </main>
     </BrowserRouter>
   );
 };

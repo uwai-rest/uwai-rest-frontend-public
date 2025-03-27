@@ -1,0 +1,29 @@
+.headerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 12px;
+
+  &User {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: #bdbdbd;
+    background-image: url(../../assets/images/user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &Chat {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/images/chat.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
