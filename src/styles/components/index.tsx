@@ -14,9 +14,7 @@ import { MuiCardContent } from "./CardContent";
 import { MuiCheckbox } from "./Checkbox";
 import { MuiChip } from "./Chip";
 import { MuiContainer } from "./Container";
-import { MuiInputAdornment } from "./InputAdornment";
 import { MuiInputBase } from "./InputBase";
-import { MuiMenu } from "./Menu";
 import { MuiMenuItem } from "./MenuItem";
 import { MuiSlider } from "./Slider";
 import { MuiTab } from "./Tab";
@@ -35,7 +33,6 @@ export const components: Components<Omit<Theme, "components">> = {
   MuiContainer,
   MuiInputBase,
   MuiButton,
-  MuiInputAdornment,
   MuiChip,
   MuiTab,
   MuiTabs,
@@ -43,7 +40,6 @@ export const components: Components<Omit<Theme, "components">> = {
   MuiCard,
   MuiSlider,
   MuiCheckbox,
-  MuiMenu,
   MuiMenuItem,
   MuiTextField,
   MuiLink: {

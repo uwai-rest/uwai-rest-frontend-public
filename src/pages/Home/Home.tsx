@@ -28,7 +28,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <Stack flexDirection="column">
+    <>
       <Card>
         <CardContent>
           <InputLabel>Осталось токенов</InputLabel>
@@ -64,6 +64,6 @@ export const HomePage = () => {
         </CardContent>
       </Card>
       <DashboardCard />
-    </Stack>
+    </>
   );
 };

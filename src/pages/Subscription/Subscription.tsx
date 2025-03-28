@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
   Box,
   Button,
@@ -7,13 +6,12 @@ import {
   CardContent,
   Checkbox,
   Chip,
-  Link,
   Stack,
   Typography,
 } from "@mui/material";
 
 import subscriptionBanner from "@/assets/images/subscription-banner.svg";
-import theme from "@/styles";
+import { StepBack } from "@/components/StepBack";
 
 export const SubscriptionPage = () => {
   const [selectedPlan, setSelectedPlan] = useState(599);
@@ -26,20 +24,7 @@ export const SubscriptionPage = () => {
 
   return (
     <>
-      <Link
-        href="/purchase-tokens"
-        sx={{ display: "flex", alignItems: "center", mb: 2 }}
-      >
-        <ArrowBackIcon
-          sx={{ cursor: "pointer", color: theme.palette.common.white }}
-        />
-        <Typography
-          variant="h6"
-          sx={{ ml: 2, color: theme.palette.common.white }}
-        >
-          Выберите подписку
-        </Typography>
-      </Link>
+      <StepBack href="/purchase-tokens">Выберите подписку</StepBack>
       <Stack flexWrap="wrap" direction="row" gap="4px">
         {plans.map((plan, index) => (
           <Card
@@ -94,6 +79,7 @@ export const SubscriptionPage = () => {
         ))}
       </Stack>
       <Button
+        href="/days-select"
         variant="contained"
         fullWidth
         sx={{ borderRadius: 3, mt: 2, py: 1.5 }}

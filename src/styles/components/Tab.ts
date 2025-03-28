@@ -11,7 +11,7 @@ export const MuiTab: Components<Theme>["MuiTab"] = {
       textTransform: "none",
       borderRadius: "8px",
       padding: "4px 10px",
-      minHeight: "36px",
+      minHeight: "100%",
       "&.Mui-selected": {
         color: theme.palette.primary.main,
         backgroundColor: theme.palette.primary.light,

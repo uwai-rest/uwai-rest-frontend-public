@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import CircleIcon from "@mui/icons-material/Circle";
 import {
   Button,
@@ -13,6 +12,7 @@ import {
 } from "@mui/material";
 
 import { BorderLinearProgress } from "@/components/BorderLinearProgress";
+import { StepBack } from "@/components/StepBack";
 import theme from "@/styles";
 import numberWithSpaces from "@/utils/numberWithSpaces";
 
@@ -26,22 +26,9 @@ export const PurchaseTokensPage = () => {
 
   return (
     <>
-      <Link href="/" sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-        <ArrowBackIcon
-          sx={{ cursor: "pointer", color: theme.palette.common.white }}
-        />
-        <Typography
-          variant="h6"
-          sx={{ ml: 2, color: theme.palette.common.white }}
-        >
-          Пополнение токенов
-        </Typography>
-      </Link>
-
+      <StepBack href="/">Пополнение токенов</StepBack>
       <Card>
-        <CardContent
-          sx={{ display: "flex", flexDirection: "column", padding: "4px" }}
-        >
+        <CardContent>
           <InputLabel>Осталось токенов</InputLabel>
           <Stack direction="row" alignItems="center" gap="8px">
             <BorderLinearProgress
